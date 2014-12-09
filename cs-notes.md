@@ -3,12 +3,17 @@ Accept arrays of primitive values in webapi action querystring
 
 ***Web APi controller***
 ```
-Get([FromUri] string[] values)
+...
+void Get([FromUri] IEnumerable<string> values)
+{
+  ...
+}
+...
 ```
 
 ***Request Query String***
 ```
-Get?values[]=v1&values[]=v2&values[]=v3
+https://.../Get?values[]=v1&values[]=v2&values[]=v3
 ```
 
 ***Angular request example***
