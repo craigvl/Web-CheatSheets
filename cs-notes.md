@@ -1,24 +1,25 @@
 Accept arrays of primitive values in webapi action querystring  
 ==============================================================
+
 ***Web APi controller***
-'''
+```
 Get([FromUri] string[] values)
-'''
+```
 
 ***Request Query String***
-'''
+```
 Get?values[]=v1&values[]=v2&values[]=v3
-'''
+```
 
 ***Angular request example***
-'''
+```
  $http({
    method: 'GET',
    url: 'Get',
    params :{
      'values[]' : ['v1','v2','v3'] }
  })
-'''
+```
 
 Enable CORS on IIS
 ==================
