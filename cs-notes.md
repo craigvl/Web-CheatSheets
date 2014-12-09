@@ -1,5 +1,5 @@
-Accept arrays of primitive values in webapi action querystring  
-==============================================================
+Accept arrays of primitive values in webapi from querystring  
+============================================================
 
 ***Web APi controller***
 ```
