@@ -2,22 +2,22 @@ Accept arrays of primitive values in webapi from querystring
 ============================================================
 
 ***Web APi controller***
-```
-...
+```C#
+
 void Get([FromUri] IEnumerable<string> values)
 {
   ...
 }
-...
+
 ```
 
 ***Request Query String***
-```
+```C#
 https://.../Get?values[]=v1&values[]=v2&values[]=v3
 ```
 
 ***Angular request example***
-```
+```C#
  $http({
    method: 'GET',
    url: 'Get',
@@ -35,7 +35,8 @@ Enable CORS on IIS
 - add specific headers
 
 
-```
+```XML
+
  <system.webServer>
     <modules>
       <remove name="WebDAVModule" />
@@ -61,7 +62,8 @@ WebApi
 
 ***Global.asax***
 
-```
+```C#
+
     protected void Application_Start()
     {
       ...
@@ -79,7 +81,8 @@ OData
 
 ***WebApiConfig.cs***
 
-```
+```C#
+
     public static void Register(HttpConfiguration config)
     {
       var builder = new ODataConventionModelBuilder();
@@ -98,7 +101,8 @@ SignalR
 
 ***FilteredCamelCasePropertyNamesContractResolver.cs***
 
-```
+```C#
+
 public class FilteredCamelCasePropertyNamesContractResolver : DefaultContractResolver
   {
     public FilteredCamelCasePropertyNamesContractResolver()
@@ -127,7 +131,8 @@ public class FilteredCamelCasePropertyNamesContractResolver : DefaultContractRes
 
 ***Global.asax***
 
-```
+```C#
+
     protected void Application_Start()
     {
       ...
